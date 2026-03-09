@@ -238,6 +238,12 @@ source ~/.zshrc
 p10k configure
 ```
 
+> **注意：** 向导完成后会生成 `~/.p10k.zsh` 配置文件，之后打开终端不会再弹向导。
+> 如果不想运行向导，可在 `~/.zshrc` 中添加以下内容跳过：
+> ```bash
+> POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+> ```
+
 ### 安装实用插件
 
 ```bash
@@ -537,6 +543,20 @@ defaults import com.googlecode.iterm2 ~/iterm2-backup.plist
 Settings → General → Settings → Load preferences from a custom folder or URL
 ```
 指定一个 iCloud Drive 或 Git 仓库目录，实现多机同步。
+
+### Q: 每次打开 iTerm2 都弹出 Powerlevel10k 配置向导？
+
+说明 `~/.p10k.zsh` 配置文件还不存在。运行一次向导即可永久解决：
+
+```bash
+p10k configure
+```
+
+如果不想运行向导，在 `~/.zshrc` 开头添加以下内容跳过：
+
+```bash
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+```
 
 ### Q: source ~/.zshrc 报 theme 'powerlevel10k/powerlevel10k' not found？
 
