@@ -211,22 +211,30 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### 安装 Powerlevel10k 主题（最推荐）
 
+**第一步：克隆主题文件**（必须先执行，否则 source ~/.zshrc 会报 theme not found）
+
 ```bash
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
-编辑 `~/.zshrc`：
+> 如果 GitHub 访问慢，可用 Gitee 镜像：
+> ```bash
+> git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git \
+>   ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+> ```
+
+**第二步：修改 `~/.zshrc` 设置主题**
 
 ```bash
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-重新加载并配置：
+**第三步：重新加载并运行配置向导**
 
 ```bash
 source ~/.zshrc
-# 首次运行会自动启动交互式配置向导
+# 首次运行会自动启动交互式配置向导，按提示选择即可
 p10k configure
 ```
 
@@ -529,6 +537,16 @@ defaults import com.googlecode.iterm2 ~/iterm2-backup.plist
 Settings → General → Settings → Load preferences from a custom folder or URL
 ```
 指定一个 iCloud Drive 或 Git 仓库目录，实现多机同步。
+
+### Q: source ~/.zshrc 报 theme 'powerlevel10k/powerlevel10k' not found？
+
+说明主题文件还未安装，先执行 git clone 克隆主题，再 source：
+
+```bash
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git \
+  ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+source ~/.zshrc
+```
 
 ### Q: 如何彻底重置 iTerm2 设置？
 
