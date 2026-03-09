@@ -62,7 +62,7 @@ brew install --cask iterm2
 ### 进入偏好设置
 
 ```
-iTerm2 菜单 → Preferences（⌘ + ,）
+iTerm2 菜单 → Settings（⌘ + ,）
 ```
 
 ### General（通用）
@@ -76,7 +76,7 @@ iTerm2 菜单 → Preferences（⌘ + ,）
 ### Appearance（外观）
 
 ```
-Preferences → Appearance → General
+Settings → Appearance → General
 ```
 
 - **Theme**：推荐选 `Minimal` 或 `Compact`（更现代简洁）
@@ -88,7 +88,7 @@ Preferences → Appearance → General
 Profiles 是 iTerm2 的核心概念，每个 Profile 可以有独立的颜色、字体、快捷键等配置。
 
 **创建新 Profile：**
-1. `Preferences → Profiles → 左下角 +`
+1. `Settings → Profiles → 左下角 +`
 2. 设置名称，如 `Default`
 
 #### Colors（颜色）
@@ -99,7 +99,7 @@ Profiles 是 iTerm2 的核心概念，每个 Profile 可以有独立的颜色、
 # 下载 Dracula 配色（示例）
 git clone https://github.com/dracula/iterm.git ~/Downloads/dracula-iterm
 
-# 然后在 Preferences → Profiles → Colors → Color Presets → Import
+# 然后在 Settings → Profiles → Colors → Color Presets → Import
 # 选择下载的 .itermcolors 文件
 ```
 
@@ -122,7 +122,7 @@ brew install --cask font-fira-code-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-设置路径：`Preferences → Profiles → Text → Font`
+设置路径：`Settings → Profiles → Text → Font`
 
 推荐配置：
 - Font: `MesloLGS NF` 或 `JetBrainsMono Nerd Font`
@@ -132,7 +132,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 #### Window（窗口）
 
 ```
-Preferences → Profiles → Window
+Settings → Profiles → Window
 ```
 
 - **Transparency**：透明度，推荐 `10-20`
@@ -142,7 +142,7 @@ Preferences → Profiles → Window
 #### Terminal（终端）
 
 ```
-Preferences → Profiles → Terminal
+Settings → Profiles → Terminal
 ```
 
 - **Scrollback lines**：设置为 `10000`（增大滚动缓冲区）
@@ -151,7 +151,7 @@ Preferences → Profiles → Terminal
 ### Keys（快捷键）
 
 ```
-Preferences → Profiles → Keys → Key Mappings
+Settings → Profiles → Keys → Key Mappings
 ```
 
 **推荐添加 Option 键跳词映射（像 macOS 文本框一样用 Option+← → 跳词）：**
@@ -169,7 +169,7 @@ Preferences → Profiles → Keys → Key Mappings
 ### 状态栏（Status Bar）
 
 ```
-Preferences → Profiles → Session → Status bar enabled ✓ → Configure Status Bar
+Settings → Profiles → Session → Status bar enabled ✓ → Configure Status Bar
 ```
 
 可拖入的组件：
@@ -183,7 +183,7 @@ Preferences → Profiles → Session → Status bar enabled ✓ → Configure St
 ### 窗口透明度 + 毛玻璃
 
 ```
-Preferences → Profiles → Window
+Settings → Profiles → Window
 → Transparency: 15
 → Blur: ✓ (Radius: 20)
 ```
@@ -193,8 +193,8 @@ Preferences → Profiles → Window
 ### 隐藏标题栏（Minimal 主题）
 
 ```
-Preferences → Appearance → General → Theme: Minimal
-Preferences → Appearance → Windows → Hide scrollbars ✓
+Settings → Appearance → General → Theme: Minimal
+Settings → Appearance → Windows → Hide scrollbars ✓
 ```
 
 ---
@@ -303,7 +303,7 @@ source ~/.zshrc
 **Hotkey Window（热键窗口）** 是 iTerm2 最实用的功能之一 —— 随时按快捷键呼出/隐藏终端：
 
 ```
-Preferences → Keys → Hotkey
+Settings → Keys → Hotkey
 → Show/hide all windows with a system-wide hotkey ✓
 → 设置快捷键，如 Option + Space 或 ⌃ + `
 ```
@@ -348,7 +348,7 @@ Esc             →  退出回放
 - 匹配 IP 地址时自动打开 SSH
 
 ```
-Preferences → Profiles → Advanced → Triggers → +
+Settings → Profiles → Advanced → Triggers → +
 ```
 
 示例触发器：高亮 ERROR：
@@ -438,7 +438,7 @@ Window → Restore Window Arrangement
 
 设置启动时自动恢复：
 ```
-Preferences → General → Startup → Open Arrangement
+Settings → General → Startup → Open Arrangement
 ```
 
 ### Coprocess（协同进程）
@@ -475,7 +475,7 @@ iterm2.run_until_complete(main)
 在 `.ssh/config` 中配合 iTerm2 Profile 使用：
 
 ```
-Preferences → Profiles → 创建 "Remote" Profile
+Settings → Profiles → 创建 "Remote" Profile
 → Command: ssh user@hostname
 → 设置特定颜色方案（如红色边框提醒当前在远程）
 ```
@@ -498,7 +498,7 @@ tmux -CC attach # 连接已有会话
 
 ```bash
 brew install --cask font-meslo-lg-nerd-font
-# Preferences → Profiles → Text → Font → 选择 MesloLGS NF
+# Settings → Profiles → Text → Font → 选择 MesloLGS NF
 ```
 
 ### Q: 颜色主题在 SSH 远程机器上不生效？
@@ -526,7 +526,7 @@ defaults import com.googlecode.iterm2 ~/iterm2-backup.plist
 
 或使用内置的配置文件功能：
 ```
-Preferences → General → Preferences → Load preferences from a custom folder or URL
+Settings → General → Settings → Load preferences from a custom folder or URL
 ```
 指定一个 iCloud Drive 或 Git 仓库目录，实现多机同步。
 
