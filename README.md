@@ -116,7 +116,7 @@ git clone https://github.com/dracula/iterm.git ~/Downloads/dracula-iterm
 
 ```bash
 # 安装 Nerd Fonts（包含图标字体，配合 Oh My Zsh 主题）
-brew tap homebrew/cask-fonts
+# homebrew/cask-fonts 已合并到 homebrew/cask，无需单独 tap
 brew install --cask font-meslo-lg-nerd-font
 brew install --cask font-fira-code-nerd-font
 brew install --cask font-jetbrains-mono-nerd-font
